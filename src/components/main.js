@@ -34,7 +34,7 @@ class Main extends Component {
         return <div>
                     <Title title={'Photowall'}/>
                     <Photowall posts={this.state.posts} onRemovePhoto={this.removePhoto}/>
-                </div>
+               </div>
     }
 }
 

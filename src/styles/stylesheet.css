@@ -52,3 +52,12 @@ h1 {
     line-height: 2;
     padding: 5px;
 }
+
+.add-icon {
+    margin: 20px auto;
+    display: table;
+    padding: 40px;
+    background: url("https://cdn-icons-png.flaticon.com/512/1828/1828817.png") center no-repeat;
+    background-size: contain;
+    border: none;
+}

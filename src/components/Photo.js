@@ -11,7 +11,7 @@ function Photo(props) {
                         props.onRemovePhoto(post)
                     }}>Remove</button>
                 </div>
-            </figure>
+           </figure>
 }
 
 Photo.propTypes = {
