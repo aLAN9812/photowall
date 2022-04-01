@@ -25,7 +25,7 @@ class Main extends Component {
     render() {
         return <div>
                     <Title title={'Photowall'}/>
-                    <Photowall posts={posts}/>
+                    <Photowall posts={this.state.posts}/>
                 </div>
     }
 }
