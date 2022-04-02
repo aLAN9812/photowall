@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import Title from './title'
 import Photowall from './Photowall'
+import AddPhoto from './AddPhoto'
+import {Route} from 'react-router-dom'
 
 class Main extends Component {
     constructor() {
@@ -18,7 +20,7 @@ class Main extends Component {
                 id: "2",
                 description: "On a vacation!",
                 imageLink: "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2017/08/24/104670887-VacationExplainsTHUMBWEB.1910x1000.jpg"
-            }]
+            }],
         }
         this.removePhoto = this.removePhoto.bind(this)
     }
@@ -31,10 +33,15 @@ class Main extends Component {
     }
 
     render() {
-        return <div>
-                    <Title title={'Photowall'}/>
-                    <Photowall posts={this.state.posts} onRemovePhoto={this.removePhoto}/>
-               </div>
+        return (<div>
+                    <Route exact path='/' render={() => (
+                        <div>
+                            <Title title={'Photowall'}/>
+                            <Photowall posts={this.state.posts} onRemovePhoto={this.removePhoto} onNavigate={this.navigate}/>
+                        </div>
+                    )}/>
+                    <Route path='/AddPhoto' component={AddPhoto}/>
+               </div>)
     }
 }
 
