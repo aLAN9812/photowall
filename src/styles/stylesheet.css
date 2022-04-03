@@ -3,6 +3,8 @@
 html {
     font-size: 10px;
     font-family: sans-serif;
+    background: url(https://free4kwallpapers.com/uploads/wallpaper/crumpled-paper-texture-1920x1080-wallpaper.jpg);
+    background-size: cover;
 }
 
 p {
@@ -32,6 +34,7 @@ h1 {
     padding: 2rem;
     flex-grow: 1;
     margin: 0 2rem 2rem 2rem;
+    background-color: white;
 }
 
 .photo {
@@ -51,13 +54,54 @@ h1 {
     border: 2px solid #f2f2f2;
     line-height: 2;
     padding: 5px;
+    border-radius: 30px;
 }
 
 .add-icon {
-    margin: 20px auto;
+    margin: 20px auto 60px;
     display: table;
     padding: 40px;
     background: url("https://cdn-icons-png.flaticon.com/512/1828/1828817.png") center no-repeat;
     background-size: contain;
     border: none;
+}
+
+.form {
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 45px;
+    text-align: center;
+}
+
+.form input {
+    font-family: sans-serif;
+    background-color: #f2f2f2;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin: 0 0 15px;
+}
+
+.form button {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    background-color: #065784;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.form button:hover {
+    background-color: #7B8589;
+}
+
+button:hover {
+    border-color: blue;
 }
