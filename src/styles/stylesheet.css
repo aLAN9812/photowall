@@ -50,11 +50,9 @@ h1 {
 .remove-button {
     flex-basis: 48%;
     color: red;
-    font-size: 15px;
     border: 2px solid #f2f2f2;
     line-height: 2;
     padding: 5px;
-    border-radius: 30px;
 }
 
 .add-icon {
@@ -93,15 +91,29 @@ h1 {
     border: none;
     padding: 15px;
     color: white;
-    font-size: 14px;
+}
+
+.back {
+    margin: 15px auto 0;
+    display: table;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #065784;
+    width: 360px;
+    padding: 15px 0;
+    font-size: 15px;
+    border-radius: 30px;
+    text-align: center;
+    color: white
+}
+
+button {
     cursor: pointer;
+    font-size: 15px;
     border-radius: 30px;
 }
 
-.form button:hover {
+button:hover, .back:hover {
     background-color: #7B8589;
-}
-
-button:hover {
-    border-color: blue;
 }
