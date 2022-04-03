@@ -26,9 +26,16 @@ class Main extends Component {
     }
 
     removePhoto(postRemoved) {
-        console.log(postRemoved.description)
+        console.log(postRemoved)
         this.setState((state) => ({
             posts: state.posts.filter(post => post !== postRemoved)
+        }))
+    }
+
+    addPhoto(postSubmitted) {
+        console.log(postSubmitted)
+        this.setState((state) => ({
+            posts: state.posts.concat(postSubmitted)
         }))
     }
 
@@ -40,7 +47,12 @@ class Main extends Component {
                             <Photowall posts={this.state.posts} onRemovePhoto={this.removePhoto} onNavigate={this.navigate}/>
                         </div>
                     )}/>
-                    <Route path='/AddPhoto' component={AddPhoto}/>
+                    <Route path='/AddPhoto' render={({history}) => (
+                        <AddPhoto onAddPhoto={(addedPost) => {
+                            this.addPhoto(addedPost)
+                            history.push('/')
+                        }}/>
+                    )}/>
                </div>)
     }
 }
