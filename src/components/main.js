@@ -6,6 +6,10 @@ import {Link} from 'react-router-dom'
 import Single from './Single'
 
 class Main extends Component {
+    componentDidMount() {
+        this.props.startLoadingPosts()
+    }
+
     render() {
         return (
             <div>
@@ -15,10 +19,10 @@ class Main extends Component {
                         <Photowall {...this.props} />
                     </div>
                 )} />
-                <Route path='/AddPhoto' render={() => (
+                <Route path='/add_photo' render={() => (
                     <AddPhoto {...this.props}/>
                 )} />
-                <Route path='/Single/:id' render = {(params) => (
+                <Route path='/single/:id' render = {(params) => (
                     <Single {...this.props} {...params}/>
                 )} />
             </div>

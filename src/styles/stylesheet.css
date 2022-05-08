@@ -3,8 +3,7 @@
 html {
     font-size: 10px;
     font-family: sans-serif;
-    background: url(https://cdn.suwalls.com/wallpapers/photography/brick-wall-22360-1920x1080.jpg);
-    background-size: cover;
+    background: url(https://static.vecteezy.com/system/resources/previews/003/616/394/large_2x/background-of-brick-wall-texture-seamless-pattern-illustr-free-vector.jpg);
 }
 
 p {
@@ -22,7 +21,7 @@ h1 {
 }
 
 h1 a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -49,16 +48,27 @@ h1 a {
 
 .button-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .remove-button {
-    flex-basis: 48%;
+    flex-basis: 40%;
     color: white;
     border: none;
     line-height: 2;
     padding: 5px;
     background-color: crimson;
+}
+
+.comment-button {
+    text-decoration: none;
+    background-color: sandybrown;
+    flex-basis: 40%;
+    padding: 15px 0;
+    font-size: 15px;
+    border-radius: 30px;
+    text-align: center;
+    color: black
 }
 
 .add-icon {
@@ -119,7 +129,7 @@ button {
     border-radius: 30px;
 }
 
-button:hover, .back:hover {
+button:hover, .back:hover, .comment-button:hover {
     background-color: #7B8589;
 }
 
@@ -164,4 +174,21 @@ button:hover, .back:hover {
     border-bottom: 1px solid #d3d3d3;
     outline: none;
     resize: vertical;
+}
+
+.comment-count {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.speech-bubble {
+    background: url("https://d30y9cdsu7xlg0.cloudfront.net/png/51904-200.png") center no-repeat;
+    background-size: contain;
+    padding: 10px;
+    margin: 0 5px;
+    display: inline-block;
+    border: none;
+    position: relative;
 }
