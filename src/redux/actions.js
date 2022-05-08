@@ -54,8 +54,12 @@ export function loadPosts(posts) {
 }
 
 export function startRemovingPost(index, id) {
+    const nodeToRemove = {
+        [`posts/${id}`]: null,
+        [`comments/${id}`]: null
+    }
     return (dispatch) => {
-        return database.ref(`posts/${id}`).remove().then(() => {
+        return database.ref().update(nodeToRemove).then(() => {
             dispatch(removePost(index))
         }).catch((error) => {
             console.log(error)
