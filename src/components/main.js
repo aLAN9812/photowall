@@ -8,6 +8,7 @@ import Single from './Single'
 class Main extends Component {
     componentDidMount() {
         this.props.startLoadingPosts()
+        this.props.startLoadingComments()
     }
 
     render() {
