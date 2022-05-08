@@ -1,4 +1,4 @@
-import {database} from '../database/config'
+import { database } from '../database/config'
 
 export function removePost(index) {
     return {
@@ -24,7 +24,7 @@ export function addComment(comment, postId) {
 
 export function startAddingPost(post) {
     return (dispatch) => {
-        return database.ref('posts').update({[post.id]: post}).then(() => {
+        return database.ref('posts').update({ [post.id]: post }).then(() => {
             dispatch(addPost(post))
         }).catch((error) => {
             console.log(error)
@@ -93,7 +93,7 @@ export function startLoadingComments() {
 
 export function loadComments(comments) {
     return {
-        type: 'LOAD_COMMENTS', 
+        type: 'LOAD_COMMENTS',
         comments
     }
 }

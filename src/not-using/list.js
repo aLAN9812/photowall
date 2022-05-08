@@ -1,10 +1,10 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 class List extends Component {
     render() {
         return (
             <ol>
-                {this.props.listItems.map((item, index) => <li key = {index}>{item}</li>)}
+                {this.props.listItems.map((item, index) => <li key={index}>{item}</li>)}
             </ol>
         )
     }
